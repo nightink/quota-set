@@ -20,6 +20,9 @@
   ],
   "author": "nightink",
   "license": "MIT",
+  "files": [
+    "index.js"
+  ],
   "bugs": {
     "url": "https://github.com/nightink/quota-set/issues"
   },

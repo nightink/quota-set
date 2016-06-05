@@ -8,8 +8,8 @@
  * @return {Array} 返回数组
  */
 function quotaSet(num, arr) {
-  const cacheArr = arr || [];
-  return data => {
+  var cacheArr = arr || [];
+  return function(data) {
     cacheArr.unshift(data);
     if (cacheArr.length > num) {
       cacheArr.pop();
