@@ -14,4 +14,15 @@ describe('quota-set', function() {
     arr.should.be.is.Array(3);
     arr[2].should.eql('set');
   });
+
+  it('deduplication', () => {
+    const quotaSet = quotaSetFn(3, ['quota', 'set', 'array']);
+    let arr = quotaSet('array');
+    arr.should.be.is.Array(3);
+    arr.should.eql(['quota', 'set', 'array']);
+
+    arr = quotaSet('Map');
+    arr.should.be.is.Array(3);
+    arr.should.eql(['Map', 'quota', 'set']);
+  });
 });

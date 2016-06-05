@@ -1,15 +1,19 @@
 'use strict';
 
 /**
- * 定额数组，指定存储长度
+ * quota set，
  * 超过将最后面值弹出
- * @param  {Any} num 任意值
- * @param {Array} arr 传入数组 可选
- * @return {Array} 返回数组
+ * @param  {Any} num length
+ * @param {Array} arr default array
+ * @return {Array} return quota set
  */
 function quotaSet(num, arr) {
   var cacheArr = arr || [];
   return function(data) {
+    if (cacheArr.indexOf(data) > -1) {
+      return cacheArr;
+    }
+
     cacheArr.unshift(data);
     if (cacheArr.length > num) {
       cacheArr.pop();
