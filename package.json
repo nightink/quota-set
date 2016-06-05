@@ -1,0 +1,31 @@
+{
+  "name": "quota-set",
+  "version": "1.0.0",
+  "description": "quota set array",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --require should --reporter spec test/*.test.js --check-leaks"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nightink/quota-set.git"
+  },
+  "keywords": [
+    "quota",
+    "set",
+    "array"
+  ],
+  "author": "nightink",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nightink/quota-set/issues"
+  },
+  "homepage": "https://github.com/nightink/quota-set#readme",
+  "devDependencies": {
+    "mocha": "^2.5.3",
+    "should": "^9.0.0"
+  }
+}
