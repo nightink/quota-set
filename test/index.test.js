@@ -19,10 +19,10 @@ describe('quota-set', function() {
     const quotaSet = quotaSetFn(3, ['quota', 'set', 'array']);
     let arr = quotaSet('array');
     arr.should.be.is.Array(3);
-    arr.should.eql(['quota', 'set', 'array']);
+    arr.should.eql(['array', 'quota', 'set']);
 
     arr = quotaSet('Map');
     arr.should.be.is.Array(3);
-    arr.should.eql(['Map', 'quota', 'set']);
+    arr.should.eql(['Map', 'array', 'quota']);
   });
 });

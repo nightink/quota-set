@@ -10,8 +10,9 @@
 function quotaSet(num, arr) {
   var cacheArr = arr || [];
   return function(data) {
-    if (cacheArr.indexOf(data) > -1) {
-      return cacheArr;
+    const index = cacheArr.indexOf(data);
+    if (index > -1) {
+      cacheArr.splice(index, 1);
     }
 
     cacheArr.unshift(data);
